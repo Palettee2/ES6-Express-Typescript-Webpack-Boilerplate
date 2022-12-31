@@ -1,7 +1,7 @@
-# Palettee-api
+# ES6-Express-Typescript-Webpack-Boilerplate
+Boilerplate/Generator/Starter Project for building RESTful APIs and microservices using Node.js, Express, Typescript, Webpack and MongoDB
 ## Build Instructions
 
-* Clone [palettee-api](https://github.com/palettee25/palettee-api) inside your main workspace dir, eg `~/palettee-workspace`
 * Install `nvm` following instructions from this [url](https://github.com/creationix/nvm#installation-and-update)
 * Install this specific version of `nodejs` using `nvm` : `nvm install v16`
 * Check `nodejs` version by typing : `node -v`
@@ -11,9 +11,9 @@
 * Install eslint for quick fixing of clean code rules: `npm install -g eslint`
 * Run the below command to server in development mode.
 
-  `palettee-api: $ npm run serve`
+  `es6 boilerplate: $ npm run serve`
 
 * Run the below command for the production mode.
 
-  `palettee-api: $ npm run build`
+  `es6 boilerplate: $ npm run build`
 

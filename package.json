@@ -10,9 +10,9 @@
     "lint": "eslint 'src/**/*.ts'",
     "serve": "webpack --watch --env mode=development --config webpack.config.ts",
     "clean": "rimraf public",
-    "build": "webpack --mode production --config webpack.config.ts",
+    "build": "webpack --env mode=production --config webpack.config.ts",
     "dev": "nodemon public/index.js --watch public",
-    "start": "node public/index.js"
+    "start": "npm run build && node public/index.js"
   },
   "keywords": [
     "color",

@@ -12,7 +12,7 @@
     "clean": "rimraf public",
     "build": "webpack --mode production --config webpack.config.ts",
     "dev": "nodemon public/index.js --watch public",
-    "start": "npm run build && node public/index.js"
+    "start": "node public/index.js"
   },
   "keywords": [
     "color",

@@ -6,12 +6,11 @@ const getConfig = (
     env: { [key: string]: string },
     argv: { [key: string]: string }
 ) => {
-    require("dotenv-safe").config({
-        example: path.resolve(__dirname, '.env.example'),
-        sample: path.resolve(__dirname, `.env.${env.mode}`),
-        allowEmptyValues: true,
-    });
-
+    if (argv.mode !== "production") {
+        require("dotenv").config({
+            path: path.resolve(__dirname, `.env.${env.mode}`),
+        });
+    }
     const config = {
         entry: './src/index.ts',
         target: 'node',
@@ -57,7 +56,7 @@ const getConfig = (
         }
     }
 
-    if(argv.mode === "production"){
+    if (argv.mode === "production") {
         config["plugins"] = [
             new WebpackShellPluginNext({
                 onBuildStart: {
